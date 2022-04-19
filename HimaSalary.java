@@ -15,5 +15,4 @@ public class HimaSalary {
 		System.out.println("The Gross Salary is: $" + amount);
 		System.out.println("The Net Salary is: $" + (amount-pf-tax));
 	}
-
 }

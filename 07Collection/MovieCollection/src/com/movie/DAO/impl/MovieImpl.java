@@ -9,7 +9,7 @@ import com.movie.data.Movie;
 public class MovieImpl implements MovieDao {
 
     Scanner scan = new Scanner(System.in);
-    ArrayList<Movie> mList = new ArrayList<>();
+    static ArrayList<Movie> mList = new ArrayList<>();
 
     @Override
     public void addMovie() {
@@ -25,13 +25,12 @@ public class MovieImpl implements MovieDao {
         Movie m = new Movie(mName, mId, ticketPrice, ticketQuan);
         mList.add(m);
         System.out.println("Do you wish to add more movie");
-        System.out.println("1. Continue or 2. Return");
+        System.out.println("1. Continue or 2. Back");
         System.out.println("Please select from the option above");
         int choice = scan.nextInt();
         switch (choice) {
             case 1:
                 addMovie();
-                ;
                 break;
             case 2:
                 System.out.println("Returning back");
@@ -54,13 +53,12 @@ public class MovieImpl implements MovieDao {
         } else
             System.out.println("No movie added yet");
     }
-
     @Override
-    public void viewMovie(int mId) {
+    public void viewMovie(String movieName) {
         int check = 0;
         if (mList.size() != 0) {
             for (Movie movie : mList) {
-                if (movie.getMoiveId() == mId) {
+                if (movie.getMovieName().equalsIgnoreCase(movieName)) {
                     System.out.println("Movie \t MovieId \t Price \t Quantity");
                     System.out.println("-------------------------------------------------");
                     System.out.println(

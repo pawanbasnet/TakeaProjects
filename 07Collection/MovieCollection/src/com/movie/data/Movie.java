@@ -44,5 +44,7 @@ public class Movie {
         this.ticketPrice = ticketPrice;
         this.ticketQuantity = ticketQuantity;
     }
-
+    public Movie(){
+        super();
+    }
 }

@@ -17,6 +17,7 @@ public class MovieDetails {
                 System.out.println("1. Add Movie");
                 System.out.println("2. View all Movie");
                 System.out.println("3. View Movie");
+                //need to add update method
                 System.out.println("4. Back");
 
                 System.out.println("Please select from the option above");
@@ -46,6 +47,7 @@ public class MovieDetails {
                 System.out.println("------------");
                 System.out.println("1. View all Movie");
                 System.out.println("2. View Movie");
+                //need to add ticket checkout
                 System.out.println("3. Back");
 
                 System.out.println("Please select from the option above");

@@ -11,7 +11,7 @@ public class ProductDaoImpl implements ProductDao {
 
     Scanner sc = new Scanner(System.in);
 
-    List<Product> addProducts = new ArrayList<>();
+    static List<Product> addProducts = new ArrayList<>();
 
     @Override
     public void addProducts() {

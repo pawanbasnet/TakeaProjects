@@ -25,19 +25,7 @@ public class UserImpl implements UserDao {
         String pass = scan.next();
         User u = new User(firstName, lastName, email, userName, pass);
         uList.add(u);
-        System.out.println("Do you wish to add more user");
-        System.out.println("1. Continue or 2. Back");
-        System.out.println("Please select from the option above");
-        int choice = scan.nextInt();
-        switch (choice) {
-            case 1:
-                addUser();
-                break;
-            case 2:
-                System.out.println("Returning back");
-                break;
-            default:
-                System.out.println("Please select one of the option above");
+        System.out.println("User added successfully");
         }
 
     }

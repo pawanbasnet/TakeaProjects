@@ -55,4 +55,42 @@ public class ProductDetails {
         }
 
     }
+    public void ViewproductMenu() {
+        while (true) {
+            System.out.println("------------------------------");
+            System.out.println("1)View all Product");
+            System.out.println("2)View Product");
+            System.out.println("3)Back");
+            System.out.println("------------------------------");
+
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    List<Product> viewAllProduct = daoImpl.viewAllProduct();
+
+                    
+                    for (Product pro : viewAllProduct) {
+                        System.out.println(
+                                pro.getPid() + "\t" + pro.getPname() + "\t" + pro.getPrice() + "\t" + pro.getQty());
+                    }
+                    break;
+                case 2:
+                    System.out.println("Enter Product Number");
+                    Product pro = daoImpl.viewProduct(sc.nextInt());
+                    if (pro != null) {
+                        System.out.println(
+                                pro.getPid() + "\t" + pro.getPname() + "\t" + pro.getPrice() + "\t" + pro.getQty());
+                    } else
+                        System.out.println("Product does not exist");
+                    break;
+                case 3:
+                    ProductClient.main(null);
+                    break;
+                default:
+                System.out.println("Choose between 1 to 4");
+                    break;
+            }
+        }
+
+    }
 }

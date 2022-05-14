@@ -1,7 +1,6 @@
 package com.account.hashMapDemo;
 
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.Stack;
@@ -41,7 +40,7 @@ public class HashMapDemo {
         stk.push(45);
         stk.push(23);
 
-        stk.search(o)
+        stk.search(78);
 
     }
 }

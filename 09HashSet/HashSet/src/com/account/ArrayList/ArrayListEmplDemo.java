@@ -1,12 +1,13 @@
 package com.account.ArrayList;
+import java.util.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-class Employee implements Comparable<Employee>{
+class Employee1 implements Comparable<Employee1>{
     int eno;
     String ename;
-    public Employee(int eno, String ename) {
+    public Employee1(int eno, String ename) {
         this.eno = eno;
         this.ename = ename;
     }
@@ -22,28 +23,27 @@ class Employee implements Comparable<Employee>{
     public void setEname(String ename) {
         this.ename = ename;
     }
-    public int compareTo(Employee emp1){
-        if (eno<emp1.getEno())
-        return -1;
-        else if(eno > emp1.getEno())
-        return +1;
-        else 
-        return 0;
+    public int compareTo(Employee1 emp1){
+    	return ename.compareTo(emp1.getEname());
     }
 }
 
+
+
 public class ArrayListEmplDemo {
     public static void main(String[] args) {
-        Employee emp = new Employee(100, "Test");
-        Employee emp2 = new Employee(45, "Test2");
-        Employee emp3 = new Employee(124, "Test3");
-        ArrayList <Employee> addExployee = new ArrayList<>(); 
+        Employee1 emp = new Employee1(100, "Test");
+        Employee1 emp2 = new Employee1(85, "Check");
+        Employee1 emp3 = new Employee1(124, "Find");
+        Employee1 emp4 = new Employee1(115, "Test");
+        ArrayList <Employee1> addExployee = new ArrayList<>(); 
         addExployee.add(emp);
         addExployee.add(emp2);
         addExployee.add(emp3);
+        addExployee.add(emp4);
         Collections.sort(addExployee);
-        for(Employee em : addExployee){
-            System.out.println(em.getEname()+" " +em.getEno());
+        for(Employee1 em : addExployee){
+        	System.out.println(em.getEname()+" " +em.getEno());
         }
     }
 }
